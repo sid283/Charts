@@ -1,0 +1,14 @@
+.root {
+  margin-bottom: 12px;
+  .list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    .area {
+      width: 340px;
+      height: 200px;
+      flex-shrink: 0;
+    }
+  }
+}

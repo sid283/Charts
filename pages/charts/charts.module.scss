@@ -1,0 +1,37 @@
+.root {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  transition: all ease 0.3s;
+
+  .main {
+    height: 100vh;
+    overflow: scroll;
+    min-width: calc(100% - 320px);
+    transition: all ease 0.3s;
+    .header {
+      width: 100%;
+      height: 56px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      padding: 16px;
+    }
+    .chartsContainer {
+      padding: 16px;
+      margin-top: 32px;
+      min-width: calc(100% - 320px);
+      transition: all ease 0.3s;
+    }
+  }
+  .hide {
+    min-width: calc(100% - 100px);
+    transition: all ease 0.3s;
+    .chartsContainer {
+      min-width: calc(100% - 100px);
+      transition: all ease 0.3s;
+    }
+  }
+}
