@@ -23,13 +23,13 @@ const CatalogChart = () => {
     { label: "Settings", value: "settings" },
   ];
   const chartTabs = [
-    { label: "max", value: "full" },
     { label: "1y", value: "1year" },
     { label: "6m", value: "6month" },
     { label: "1m", value: "3month" },
     { label: "1w", value: "1week" },
     { label: "3d", value: "3day" },
     { label: "1d", value: "1day" },
+    { label: "max", value: "full" },
   ];
 
   const getChartData = async (value: any) => {
