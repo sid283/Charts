@@ -5,7 +5,7 @@ import NoDataToDisplay from "highcharts/modules/no-data-to-display";
 import { useEffect, useState } from "react";
 import s from "./CatalogChart.module.scss";
 
-const apiKey = "5O3X6VNDE7IDMKKF";
+const apiKey = "OJ2HO2ZXOL7UK9LS";
 const symbol = "AAPL";
 
 const CatalogChart = () => {
