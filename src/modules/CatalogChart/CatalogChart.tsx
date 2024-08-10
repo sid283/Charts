@@ -37,11 +37,11 @@ const CatalogChart = () => {
     const response = await fetch(url);
     if (response) {
       const res = await response.json();
-      if (res?.value?.payload?.RETURNS_CALCULATIONS?.MEAN?.symbol) {
+      if (res?.payload?.RETURNS_CALCULATIONS?.MEAN?.RUNNING_MEAN?.[symbol]) {
         setChartData((prev: any) => ({
           ...prev,
           [activeChart]:
-            res?.value?.payload?.RETURNS_CALCULATIONS?.MEAN?.symbol,
+            res?.payload?.RETURNS_CALCULATIONS?.MEAN?.RUNNING_MEAN?.[symbol],
         }));
       } else {
         setChartData((prev: any) => ({ ...prev, [activeChart]: {} }));
@@ -52,7 +52,7 @@ const CatalogChart = () => {
   };
 
   const getQuote = async () => {
-    const url = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${symbol}&apikey=${apiKey}`;
+    const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${apiKey}`;
     const response = await fetch(url);
     if (response) {
       const res = await response.json();
